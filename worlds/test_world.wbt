@@ -1,0 +1,635 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  ERP 0.8
+  basicTimeStep 8
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.08599996220153483 -0.6418708509747076 -0.7619749452379253 3.061419917425819
+  position 0.052951607241450906 1.7833823893277567 -0.022519026863973918
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+}
+Robot {
+  translation 0 0.98 0
+  rotation 1 0 0 0
+  children [
+    Solid {
+      translation -1.499007235575495e-08 -3.5749312960020596e-05 1.177762236512453e-08
+      rotation 0.9999999999999903 9.803049453863635e-08 -9.852535701401196e-08 -1.5699999523902546
+      children [
+        Solid {
+          children [
+            Solid {
+              rotation 0 0 1 0
+              children [
+                Solid {
+                  rotation 1 0 0 1.57
+                  children [
+                    Shape {
+                      appearance PBRAppearance {
+                      }
+                      geometry Cylinder {
+                        height 0.02
+                        radius 0.15
+                      }
+                    }
+                  ]
+                  name "upper_platform"
+                  boundingObject Cylinder {
+                    height 0.02
+                    radius 0.15
+                  }
+                  physics Physics {
+                    mass 4
+                    centerOfMass [
+                      0 0 0
+                    ]
+                  }
+                }
+                Transform {
+                  rotation 0 0 1 0
+                  children [
+                    Solid {
+                      translation 0.13 0 0
+                      children [
+                        Shape {
+                          appearance PBRAppearance {
+                          }
+                          geometry Cylinder {
+                            height 0.03
+                            radius 0.025
+                          }
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            position 2
+                            axis 0 1 0
+                          }
+                          device [
+                            PositionSensor {
+                            }
+                            RotationalMotor {
+                            }
+                          ]
+                          endPoint DEF ARM_1 Solid {
+                            translation -0.03329174692377138 0 -0.07274379414605456
+                            rotation 0 1 0 1.9999999999999998
+                            children [
+                              Transform {
+                                translation 0.08 -0.015 0
+                                children [
+                                  Hinge2Joint {
+                                    jointParameters HingeJointParameters {
+                                      position -2.42
+                                      axis 0 1 0
+                                    }
+                                    jointParameters2 JointParameters {
+                                      minStop -1.5
+                                      maxStop 1.5
+                                    }
+                                    endPoint Solid {
+                                      translation 0.16435600925621546 0 0.07339688155072266
+                                      rotation 0 -0.9999999999999999 0 0.4199999999999987
+                                      children [
+                                        Transform {
+                                          translation 0.18 0 0
+                                          children [
+                                            Hinge2Joint {
+                                              jointParameters HingeJointParameters {
+                                                position -3.14
+                                                axis 0 1 0
+                                              }
+                                              jointParameters2 JointParameters {
+                                                minStop -1.5
+                                                maxStop 1.5
+                                              }
+                                              endPoint Solid {
+                                                translation -0.0001433386867368857 0.015 -0.059999828783263084
+                                                rotation -0.5762774369883852 -0.578115985622625 0.5776557995776366 4.187869343793437
+                                                children [
+                                                  Shape {
+                                                    appearance PBRAppearance {
+                                                    }
+                                                    geometry Cylinder {
+                                                      height 0.01
+                                                      radius 0.06
+                                                    }
+                                                  }
+                                                ]
+                                                name "lower_platform"
+                                                boundingObject Cylinder {
+                                                  height 0.01
+                                                  radius 0.06
+                                                }
+                                                physics Physics {
+                                                  mass 2
+                                                }
+                                              }
+                                            }
+                                            BallJoint {
+                                              jointParameters BallJointParameters {
+                                                anchor 0 0 0.02
+                                              }
+                                              endPoint SolidReference {
+                                                solidName "lower_platform"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                        Shape {
+                                          appearance PBRAppearance {
+                                          }
+                                          geometry Box {
+                                            size 0.36 0.01 0.01
+                                          }
+                                        }
+                                      ]
+                                      name "delta_arm_1_l1_leg_link(2)"
+                                      boundingObject Shape {
+                                        appearance PBRAppearance {
+                                        }
+                                        geometry Box {
+                                          size 0.36 0.01 0.01
+                                        }
+                                      }
+                                      physics Physics {
+                                        mass 1.5
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                              Transform {
+                                translation 0.08 0.015 0
+                                children [
+                                  Hinge2Joint {
+                                    jointParameters HingeJointParameters {
+                                      position -2.42
+                                      axis 0 1 0
+                                    }
+                                    jointParameters2 JointParameters {
+                                      minStop -1.5
+                                      maxStop 1.5
+                                    }
+                                    endPoint Solid {
+                                      translation 0.16435600925621546 0 0.07339688155072266
+                                      rotation 0 -0.9999999999999999 0 0.4199999999999987
+                                      children [
+                                        Transform {
+                                          translation 0.18 0 0
+                                          children [
+                                            BallJoint {
+                                              jointParameters BallJointParameters {
+                                                anchor 0 0 0.02
+                                              }
+                                              endPoint SolidReference {
+                                                solidName "lower_platform"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                        Shape {
+                                          appearance PBRAppearance {
+                                          }
+                                          geometry Box {
+                                            size 0.36 0.01 0.01
+                                          }
+                                        }
+                                      ]
+                                      name "delta_arm_1_l1_leg_link(1)"
+                                      boundingObject Shape {
+                                        appearance PBRAppearance {
+                                        }
+                                        geometry Box {
+                                          size 0.36 0.01 0.01
+                                        }
+                                      }
+                                      physics Physics {
+                                        mass 1.5
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                              Shape {
+                                appearance PBRAppearance {
+                                }
+                                geometry Box {
+                                  size 0.16 0.03 0.03
+                                }
+                              }
+                            ]
+                            name "delta_arm_1_upper_leg_link"
+                            boundingObject Shape {
+                              appearance PBRAppearance {
+                              }
+                              geometry Box {
+                                size 0.16 0.03 0.03
+                              }
+                            }
+                            physics Physics {
+                              mass 1.1
+                            }
+                          }
+                        }
+                      ]
+                      name "arm_1_link(3)"
+                      boundingObject Cylinder {
+                        height 0.03
+                        radius 0.025
+                      }
+                      physics Physics {
+                        mass 0.02
+                      }
+                    }
+                  ]
+                }
+                Transform {
+                  rotation 0 0 1 -2.09
+                  children [
+                    Solid {
+                      translation 0.13 0 0
+                      children [
+                        Shape {
+                          appearance PBRAppearance {
+                          }
+                          geometry Cylinder {
+                            height 0.03
+                            radius 0.025
+                          }
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            position 2
+                            axis 0 1 0
+                          }
+                          device [
+                            PositionSensor {
+                            }
+                            RotationalMotor {
+                            }
+                          ]
+                          endPoint DEF ARM_1 Solid {
+                            translation -0.03329174692377138 0 -0.07274379414605456
+                            rotation 0 1 0 1.9999999999999998
+                            children [
+                              Transform {
+                                translation 0.08 -0.015 0
+                                children [
+                                  Hinge2Joint {
+                                    jointParameters HingeJointParameters {
+                                      position -2.42
+                                      axis 0 1 0
+                                    }
+                                    jointParameters2 JointParameters {
+                                      minStop -1.5
+                                      maxStop 1.5
+                                    }
+                                    endPoint Solid {
+                                      translation 0.16435600925621546 0 0.07339688155072266
+                                      rotation 0 -0.9999999999999999 0 0.4199999999999987
+                                      children [
+                                        Transform {
+                                          translation 0.18 0 0
+                                          children [
+                                            Hinge2Joint {
+                                              jointParameters HingeJointParameters {
+                                                axis 0 1 0
+                                              }
+                                              jointParameters2 JointParameters {
+                                                minStop -1.5
+                                                maxStop 1.5
+                                              }
+                                            }
+                                            BallJoint {
+                                              jointParameters BallJointParameters {
+                                                anchor 0 0 0.02
+                                              }
+                                              endPoint SolidReference {
+                                                solidName "lower_platform"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                        Shape {
+                                          appearance PBRAppearance {
+                                          }
+                                          geometry Box {
+                                            size 0.36 0.01 0.01
+                                          }
+                                        }
+                                      ]
+                                      name "delta_arm_1_l1_leg_link(2)"
+                                      boundingObject Shape {
+                                        appearance PBRAppearance {
+                                        }
+                                        geometry Box {
+                                          size 0.36 0.01 0.01
+                                        }
+                                      }
+                                      physics Physics {
+                                        mass 1.5
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                              Transform {
+                                translation 0.08 0.015 0
+                                children [
+                                  Hinge2Joint {
+                                    jointParameters HingeJointParameters {
+                                      position -2.42
+                                      axis 0 1 0
+                                    }
+                                    jointParameters2 JointParameters {
+                                      minStop -1.5
+                                      maxStop 1.5
+                                    }
+                                    endPoint Solid {
+                                      translation 0.16435600925621546 0 0.07339688155072266
+                                      rotation 0 -0.9999999999999999 0 0.4199999999999987
+                                      children [
+                                        Transform {
+                                          translation 0.18 0 0
+                                          children [
+                                            BallJoint {
+                                              jointParameters BallJointParameters {
+                                                anchor 0 0 0.02
+                                              }
+                                              endPoint SolidReference {
+                                                solidName "lower_platform"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                        Shape {
+                                          appearance PBRAppearance {
+                                          }
+                                          geometry Box {
+                                            size 0.36 0.01 0.01
+                                          }
+                                        }
+                                      ]
+                                      name "delta_arm_1_l1_leg_link(1)"
+                                      boundingObject Shape {
+                                        appearance PBRAppearance {
+                                        }
+                                        geometry Box {
+                                          size 0.36 0.01 0.01
+                                        }
+                                      }
+                                      physics Physics {
+                                        mass 1.5
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                              Shape {
+                                appearance PBRAppearance {
+                                }
+                                geometry Box {
+                                  size 0.16 0.03 0.03
+                                }
+                              }
+                            ]
+                            name "delta_arm_1_upper_leg_link"
+                            boundingObject Shape {
+                              appearance PBRAppearance {
+                              }
+                              geometry Box {
+                                size 0.16 0.03 0.03
+                              }
+                            }
+                            physics Physics {
+                              mass 1.1
+                            }
+                          }
+                        }
+                      ]
+                      name "arm_1_link(2)"
+                      boundingObject Cylinder {
+                        height 0.03
+                        radius 0.025
+                      }
+                      physics Physics {
+                        mass 0.02
+                      }
+                    }
+                  ]
+                }
+                Transform {
+                  rotation 0 0 1 2.09
+                  children [
+                    Solid {
+                      translation 0.13 0 0
+                      children [
+                        Shape {
+                          appearance PBRAppearance {
+                          }
+                          geometry Cylinder {
+                            height 0.03
+                            radius 0.025
+                          }
+                        }
+                        HingeJoint {
+                          jointParameters HingeJointParameters {
+                            position 2
+                            axis 0 1 0
+                          }
+                          device [
+                            PositionSensor {
+                            }
+                            RotationalMotor {
+                            }
+                          ]
+                          endPoint DEF ARM_1 Solid {
+                            translation -0.03329174692377138 0 -0.07274379414605456
+                            rotation 0 1 0 1.9999999999999998
+                            children [
+                              Transform {
+                                translation 0.08 -0.015 0
+                                children [
+                                  Hinge2Joint {
+                                    jointParameters HingeJointParameters {
+                                      position -2.42
+                                      axis 0 1 0
+                                    }
+                                    jointParameters2 JointParameters {
+                                      minStop -1.5
+                                      maxStop 1.5
+                                    }
+                                    endPoint Solid {
+                                      translation 0.16435600925621546 0 0.07339688155072266
+                                      rotation 0 -0.9999999999999999 0 0.4199999999999987
+                                      children [
+                                        Transform {
+                                          translation 0.18 0 0
+                                          children [
+                                            Hinge2Joint {
+                                              jointParameters HingeJointParameters {
+                                                axis 0 1 0
+                                              }
+                                              jointParameters2 JointParameters {
+                                                minStop -1.5
+                                                maxStop 1.5
+                                              }
+                                            }
+                                            BallJoint {
+                                              jointParameters BallJointParameters {
+                                                anchor 0 0 0.02
+                                              }
+                                              endPoint SolidReference {
+                                                solidName "lower_platform"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                        Shape {
+                                          appearance PBRAppearance {
+                                          }
+                                          geometry Box {
+                                            size 0.36 0.01 0.01
+                                          }
+                                        }
+                                      ]
+                                      name "delta_arm_1_l1_leg_link(2)"
+                                      boundingObject Shape {
+                                        appearance PBRAppearance {
+                                        }
+                                        geometry Box {
+                                          size 0.36 0.01 0.01
+                                        }
+                                      }
+                                      physics Physics {
+                                        mass 1.5
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                              Transform {
+                                translation 0.08 0.015 0
+                                children [
+                                  Hinge2Joint {
+                                    jointParameters HingeJointParameters {
+                                      position -2.42
+                                      axis 0 1 0
+                                    }
+                                    jointParameters2 JointParameters {
+                                      minStop -1.5
+                                      maxStop 1.5
+                                    }
+                                    endPoint Solid {
+                                      translation 0.16435600925621546 0 0.07339688155072266
+                                      rotation 0 -0.9999999999999999 0 0.4199999999999987
+                                      children [
+                                        Transform {
+                                          translation 0.18 0 0
+                                          children [
+                                            BallJoint {
+                                              jointParameters BallJointParameters {
+                                                anchor 0 0 0.02
+                                              }
+                                              endPoint SolidReference {
+                                                solidName "lower_platform"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                        Shape {
+                                          appearance PBRAppearance {
+                                          }
+                                          geometry Box {
+                                            size 0.36 0.01 0.01
+                                          }
+                                        }
+                                      ]
+                                      name "delta_arm_1_l1_leg_link(1)"
+                                      boundingObject Shape {
+                                        appearance PBRAppearance {
+                                        }
+                                        geometry Box {
+                                          size 0.36 0.01 0.01
+                                        }
+                                      }
+                                      physics Physics {
+                                        mass 1.5
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                              Shape {
+                                appearance PBRAppearance {
+                                }
+                                geometry Box {
+                                  size 0.16 0.03 0.03
+                                }
+                              }
+                            ]
+                            name "delta_arm_1_upper_leg_link"
+                            boundingObject Shape {
+                              appearance PBRAppearance {
+                              }
+                              geometry Box {
+                                size 0.16 0.03 0.03
+                              }
+                            }
+                            physics Physics {
+                              mass 1.1
+                            }
+                          }
+                        }
+                      ]
+                      name "arm_1_link(1)"
+                      boundingObject Cylinder {
+                        height 0.03
+                        radius 0.025
+                      }
+                      physics Physics {
+                        mass 0.02
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "grasper_base"
+              boundingObject Sphere {
+                radius 0.005
+              }
+              physics Physics {
+                mass 0.02
+              }
+            }
+          ]
+          name "delta_base_link"
+          boundingObject Sphere {
+            radius 0.005
+          }
+          physics Physics {
+            mass 0.02
+          }
+        }
+      ]
+      name "top_front_frame_link"
+      boundingObject Sphere {
+        radius 0.005
+      }
+      physics Physics {
+        mass 0.02
+      }
+    }
+  ]
+  name "delta_top"
+  controller "<extern>"
+  controllerArgs [
+    ""
+  ]
+}
