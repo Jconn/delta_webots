@@ -83,7 +83,7 @@ PROTO delta [
                                                         }
                                                         jointParameters2 JointParameters {
                                                             minStop -1.5
-                                                                maxStop 1.5
+                                                            maxStop 1.5
                                                         }
                                                         endPoint Solid {
                                                             translation 0.16435600925621546 0 0.07339688155072266
@@ -98,8 +98,8 @@ PROTO delta [
                                                                                     axis 0 1 0
                                                                             }
                                                                             jointParameters2 JointParameters {
-                                                                                minStop -1.5
-                                                                                    maxStop 1.5
+                                                                                minStop -.2
+                                                                                maxStop .2
                                                                             }
                                                                             endPoint Solid {
                                                                                 translation -0.0001433386867368857 0.015 -0.059999828783263084
@@ -173,8 +173,8 @@ PROTO delta [
                                                                             axis 0 1 0
                                                                         }
                                                                         jointParameters2 JointParameters {
-                                                                            minStop -1.5
-                                                                                maxStop 1.5
+                                                                                minStop -.2
+                                                                                maxStop .2
                                                                         }
                                                                         endPoint SolidReference {
                                                                             solidName "lower_platform"
@@ -294,8 +294,8 @@ PROTO delta [
                                                                                 axis 0 1 0
                                                                             }
                                                                             jointParameters2 JointParameters {
-                                                                                minStop -1.5
-                                                                                    maxStop 1.5
+                                                                                minStop -.2
+                                                                                maxStop .2
                                                                             }
                                                                             endPoint SolidReference {
                                                                                 solidName "lower_platform"
@@ -350,8 +350,8 @@ PROTO delta [
                                                                             axis 0 1 0
                                                                         }
                                                                         jointParameters2 JointParameters {
-                                                                            minStop -1.5
-                                                                                maxStop 1.5
+                                                                                minStop -.2
+                                                                                maxStop .2
                                                                         }
                                                                         endPoint SolidReference {
                                                                             solidName "lower_platform"
@@ -471,8 +471,8 @@ PROTO delta [
                                                                                 axis 0 1 0
                                                                             }
                                                                             jointParameters2 JointParameters {
-                                                                                minStop -1.5
-                                                                                    maxStop 1.5
+                                                                                minStop -.2
+                                                                                maxStop .2
                                                                             }
                                                                             endPoint SolidReference {
                                                                                 solidName "lower_platform"
@@ -527,8 +527,8 @@ PROTO delta [
                                                                             axis 0 1 0
                                                                         }
                                                                         jointParameters2 JointParameters {
-                                                                            minStop -1.5
-                                                                                maxStop 1.5
+                                                                                minStop -.2
+                                                                                maxStop .2
                                                                         }
                                                                         endPoint SolidReference {
                                                                             solidName "lower_platform"
