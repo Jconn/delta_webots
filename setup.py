@@ -1,5 +1,6 @@
 from setuptools import setup
 import os
+from glob import glob
 
 package_name = 'delta_webots'
 
@@ -13,7 +14,8 @@ setup(
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name,
                       'worlds'), [os.path.join('worlds', 'test_world.wbt')]),
-        (f'share/{package_name}/launch', ['launch/delta.launch.py'])
+        (f'share/{package_name}/launch', ['launch/delta.launch.py']),
+        (os.path.join('share', package_name, 'protos'), glob('protos/*.proto'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
